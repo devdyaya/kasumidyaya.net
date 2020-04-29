@@ -75,8 +75,8 @@ $unit: 1rem;
 $c-darkgray: #252f39;
 $c-lightgray: #959595;
 $c-frostywhite: #e0e3e4;
-$c-bg: #f0f1f6; //f4f4f4 //#ebeae8;#f5f4ed;
-$c-font: #000;
+$c-bg: #fff;
+$c-font: #333;
 
 
 // フォントアイコン
@@ -128,6 +128,7 @@ a {
 	@include link-colors(#000, $c-lightgray, #00a0e9, #000, $c-lightgray);
 }
 body {
+	height: 100vh;
 	background-color: $c-bg;
 }
 /* 固定幅フォント */

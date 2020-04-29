@@ -3,11 +3,9 @@
 // 基本設定の読み込み
 @import "assets/scss/foundation/reset.scss";
 @import "assets/scss/foundation/base.scss";
+@import "assets/scss/layout/container.scss";
 @import "assets/scss/layout/grid.scss";
-
-
-
-
+@import "assets/scss/object/project/index.scss";
 
 
 // ########################################################
@@ -18,7 +16,7 @@ $c-bg: #efefef;
 
 
 /*#########################################################
-要素関連  
+要素関連
 #########################################################*/
 
 p{
