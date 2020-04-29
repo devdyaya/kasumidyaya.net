@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+// 基本設定の読み込み
+@import "assets/scss/foundation/reset.scss";
+@import "assets/scss/foundation/base.scss";
+@import "assets/scss/layout/grid.scss";
+
+
+
+
+
+
+// ########################################################
+// 宣言
+// ########################################################
+$padding: 20px;
+$c-bg: #efefef;
+
+
+/*#########################################################
+要素関連  
+#########################################################*/
+
+p{
+	margin: 20px auto;
+}
+
+
+/*#########################################################
+WordPress必須クラス
+#########################################################*/
+.wp-caption{/**/}
+.wp-caption-text{/**/}
+.sticky{/**/}
+.gallery-caption{/**/}
+.bypostauthor{/**/}
+.alignright{/**/}
+.alignleft{/**/}
+.aligncenter{/**/}
+.screen-reader-text{/**/}
+
+
+
+
+/*#########################################################
+レイアウト
+#########################################################*/
+@mixin layout{
+	padding: $padding;
+}
+
+/* サイトヘッダ */
+header#site-header {
+	@include layout;
+	background-color: $c-bg;
+}
+
+/* メインカラム */
+main{
+	@include layout;
+	/* 記事エントリ */
+	article.entry{
+		padding: $padding;
+		border-bottom: 3px dotted #efefef;
+	}
+	/* 記事エントリのページナビゲーション */
+	.navigation{
+		padding: $padding;
+	}
+}
+
+/* サブカラム */
+#sub{
+	@include layout;
+	.widget{
+		padding: $padding;
+	}
+}
+
+/* サイトフッタ */
+footer#site-footer{
+	@include layout;
+	background-color: $c-bg;
+}
