@@ -24,8 +24,7 @@
 	<meta property="og:description" content="" />
 	<meta property="fb:app_id" content="">
 
-	<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.ico">
-	<link rel="apple-touch-icon-precomposed" href="/favicon-152.png">
+	<link rel="icon" href="<?php echo get_theme_file_uri('/favicon.ico'); ?>">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
