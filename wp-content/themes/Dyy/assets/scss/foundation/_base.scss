@@ -106,7 +106,7 @@ a {
 	display: inline-block;
 	text-decoration: none;
 	&:hover {
-		background: #333333;
+		background: #0bd9d8 ;
 		color: #ffffff;
 	}
 }
@@ -142,6 +142,10 @@ sup {
 }
 sub {
 	bottom: -0.25em;
+}
+::selection {
+	color: #ffffff;
+	background: #0bd9d8;
 }
 code {}
 strong {
