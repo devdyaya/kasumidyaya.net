@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Noto Sans CJK JP Subset';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans CJK JP'),
+    local('NotoSansCJKjp-Regular'),
+    local('NotoSansJP-Regular'),
+    url('./assets/font/NotoSansCJKjp-Regular.woff2') format('woff2'),
+    url('./assets/font/NotoSansCJKjp-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Sans CJK JP Subset';
+  font-style: normal;
+  font-weight: 700;
+  src: local('NotoSansCJKjp-Bold'),
+    local('NotoSansJP-Bold'),
+    url('./assets/font/NotoSansCJKjp-Bold.woff2') format('woff2'),
+    url('./assets/font/NotoSansCJKjp-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Futura-bold';
+  src: url('./assets/font/Futura-Bol.ttf') format('truetype'),
+       url('./assets/font/Futura-Bol.woff') format('woff');
+}
