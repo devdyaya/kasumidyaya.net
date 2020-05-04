@@ -7,29 +7,6 @@ mixin
 
 #########################################################*/
 
-@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
-	color: $normal;
-	@if $visited {
-		&:visited {
-			color: $visited;
-		}
-	}
-	@if $focus {
-		&:focus {
-			color: $focus;
-		}
-	}
-	@if $hover {
-		&:hover {
-			color: $hover;
-		}
-	}
-	@if $active {
-		&:active {
-			color: $active;
-		}
-	}
-}
 
 /* ========================================================
 メディアクエリ
@@ -124,8 +101,14 @@ p {
 }
 
 a {
-	// 通常時の文字色、:hover、:active、:visited、:focus
-	@include link-colors(#000, $c-lightgray, #00a0e9, #000, $c-lightgray);
+	padding: 2px 4px;
+	color: #333333;
+	display: inline-block;
+	text-decoration: none;
+	&:hover {
+		background: #333333;
+		color: #ffffff;
+	}
 }
 body {
 	height: 100vh;
