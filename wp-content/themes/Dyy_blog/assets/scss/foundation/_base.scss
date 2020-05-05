@@ -103,13 +103,12 @@ p {
 }
 
 a {
-	padding: 2px 4px;
 	color: #333333;
-	display: inline-block;
-	text-decoration: none;
+	text-decoration: underline;
 	&:hover {
-		background: #0bd9d8 ;
 		color: #ffffff;
+		background: #0bd9d8;
+		text-decoration: none;
 	}
 }
 body {
@@ -176,4 +175,9 @@ textarea {
 	box-sizing: border-box;;
 	border: 1px solid $c-frostywhite;
 	padding: $unit*0.5;
+}
+
+
+.wrapper {
+	margin: 40px auto 0;
 }

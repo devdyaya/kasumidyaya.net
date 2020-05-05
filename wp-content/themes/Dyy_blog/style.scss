@@ -3,25 +3,16 @@
 // 基本設定の読み込み
 @import "assets/scss/foundation/reset.scss";
 @import "assets/scss/foundation/base.scss";
+
 @import "assets/scss/layout/container.scss";
 @import "assets/scss/layout/grid.scss";
+@import "assets/scss/layout/header.scss";
+@import "assets/scss/layout/footer.scss";
+
 @import "assets/scss/object/project/index.scss";
 
-
-// ########################################################
-// 宣言
-// ########################################################
-$padding: 20px;
-$c-bg: #efefef;
-
-
-/*#########################################################
-要素関連
-#########################################################*/
-
-p{
-	margin: 20px auto;
-}
+@import "assets/scss/object/component/article.scss";
+@import "assets/scss/object/component/entry.scss";
 
 
 /*#########################################################
@@ -38,45 +29,3 @@ WordPress必須クラス
 .screen-reader-text{/**/}
 
 
-
-
-/*#########################################################
-レイアウト
-#########################################################*/
-@mixin layout{
-	padding: $padding;
-}
-
-/* サイトヘッダ */
-header#site-header {
-	@include layout;
-	background-color: $c-bg;
-}
-
-/* メインカラム */
-main{
-	@include layout;
-	/* 記事エントリ */
-	article.entry{
-		padding: $padding;
-		border-bottom: 3px dotted #efefef;
-	}
-	/* 記事エントリのページナビゲーション */
-	.navigation{
-		padding: $padding;
-	}
-}
-
-/* サブカラム */
-#sub{
-	@include layout;
-	.widget{
-		padding: $padding;
-	}
-}
-
-/* サイトフッタ */
-footer#site-footer{
-	@include layout;
-	background-color: $c-bg;
-}

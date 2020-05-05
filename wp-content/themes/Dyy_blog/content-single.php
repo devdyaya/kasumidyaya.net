@@ -26,9 +26,6 @@
 	<!-- entry-footer -->
 	<footer class="entry-footer">
 
-		<!-- コメントの表示 -->
-		<?php comments_template(); ?>
-
 	</footer>
 	<!-- /entry-footer -->
 </article>

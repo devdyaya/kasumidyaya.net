@@ -4,7 +4,6 @@
 */
 get_header(); ?>
 
-single-job
 
 		<?php if ( have_posts() ) : ?>
 		<!-- entry -->

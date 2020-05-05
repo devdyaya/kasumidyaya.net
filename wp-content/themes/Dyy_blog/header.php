@@ -33,3 +33,9 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
+<div class="wrapper grid">
+
+<header class="l-header col-desk-12">
+	<h1 class="l-header_title"><a href="http://kasumidyaya.net">kasumidyaya.net</a> / <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Blog</a></h1>
+</header>
