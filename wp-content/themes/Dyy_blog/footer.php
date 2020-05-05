@@ -5,7 +5,7 @@
 ?>
 <!-- ページフッタ -->
 <footer class="l-footer">
-		<p id="copyright" class="col-desk-12">&copy;kasumidyaya</p>
+	<p id="copyright" class="col-desk-12">&copy;kasumidyaya</p>
 </footer>
 <!-- /ページフッタ -->
 

@@ -7,11 +7,11 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 		<!-- entry -->
-		<section class="entry-list">
+		<article class="c-article col-desk-12">
 			<?php
 			while ( have_posts() ) {
 				the_post();
-				get_template_part( 'content-single', get_post_format() );
+				get_template_part( 'partials/content-single', get_post_format() );
 			}
 
 			// ページナビゲーション
@@ -20,19 +20,9 @@ get_header(); ?>
 				'next_text'          => "NEXT &gt;",
 			) );
 		?>
-		</section>
+		</article>
 		<!-- /entry -->
 
 		<?php endif; ?>
-
-	</main>
-	<!-- /main -->
-
-	<!-- sidebar -->
-<?php get_sidebar(); ?>
-	<!-- /sidebar -->
-
-</div>
-<!-- /container -->
 
 <?php get_footer(); ?>
