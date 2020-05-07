@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+// 基本設定の読み込み
+@import "assets/scss/foundation/reset.scss";
+@import "assets/scss/foundation/base.scss";
+
+@import "assets/scss/layout/container.scss";
+@import "assets/scss/layout/grid.scss";
+@import "assets/scss/layout/header.scss";
+@import "assets/scss/layout/footer.scss";
+
+@import "assets/scss/object/project/index.scss";
+
+@import "assets/scss/object/component/article.scss";
+@import "assets/scss/object/component/entry.scss";
+
+
+/*#########################################################
+WordPress必須クラス
+#########################################################*/
+.wp-caption{/**/}
+.wp-caption-text{/**/}
+.sticky{/**/}
+.gallery-caption{/**/}
+.bypostauthor{/**/}
+.alignright{/**/}
+.alignleft{/**/}
+.aligncenter{/**/}
+.screen-reader-text{/**/}
+
+
