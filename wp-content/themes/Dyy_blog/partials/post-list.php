@@ -9,14 +9,8 @@
   </a>
   <div class="info">
     <!--カテゴリ-->
-    <?php if (!is_category() && has_category()): ?>
       <span class="category">
-        <a href="<?php get_category_link( $category_id ); ?>">
-          <?php
-            $postcat = get_the_category();
-            echo $postcat[0]->name;
-          ?>
-        </a>
+        <?php the_category(','); ?>
       </span>
       <!--投稿日を表示-->
       <span class="date">
@@ -24,6 +18,5 @@
           <?php echo get_the_date(); ?>
         </time>
       </span>
-    <?php endif; ?>
   </div>
 </div>

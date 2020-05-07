@@ -7,7 +7,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 		<!-- entry -->
-		<article class="c-article col-desk-12">
+		<article class="c-article col-desk-12 col-mb-12">
 			<?php
 			while ( have_posts() ) {
 				the_post();
@@ -24,5 +24,17 @@ get_header(); ?>
 		<!-- /entry -->
 
 		<?php endif; ?>
+
+		<div class="p-article_footer col-desk-12 col-mb-12">
+			<ul class="p-article_footer_share">
+				<li>
+						<a href="" class="twitter-share-button" data-show-count="false">Tweet</a>
+					</a>
+				</li>
+			</ul>
+			<div class="p-article_back">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">戻る</a>
+			</div>
+		</div>
 
 <?php get_footer(); ?>

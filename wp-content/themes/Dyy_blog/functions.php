@@ -65,7 +65,7 @@ function my_wp_title($title) {
     if( is_front_page() && is_home() ){
         return get_bloginfo('name');
     } else {
-        return $title."|". get_bloginfo('name');
+        return "honya" .$title." | ". get_bloginfo('name');
     }
 }
 add_filter( 'wp_title', 'my_wp_title');
@@ -115,3 +115,4 @@ function twpp_enqueue_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'twpp_enqueue_scripts' );
+

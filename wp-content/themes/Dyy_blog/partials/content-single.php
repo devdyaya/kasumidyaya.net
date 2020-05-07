@@ -13,17 +13,19 @@
 		<?php endif; ?>
 	</div>
 	<div class="info">
-		<!--カテゴリ-->
 		<?php if (!is_category() && has_category()): ?>
 			<span class="category">
-				<a href="<?php get_category_link( $category_id ); ?>">
+				<!-- <a href="<?php get_category_link( $category_id ); ?>"> -->
 					<?php
-						$postcat = get_the_category();
-						echo $postcat[0]->name;
+						// $postcat = get_the_category();
+						// echo $postcat[0]->name;
+						$category = get_the_category();
+
+						echo '<a href="' . get_category_link( $category[0]->term_id ) . '">' . $category[0]->name . '</a>';
+
 					?>
-				</a>
+				<!-- </a> -->
 			</span>
-			<!--投稿日を表示-->
 			<span class="date">
 				<time datetime="<?php echo get_the_date( 'Y/m/d' ); ?>">
 					<?php echo get_the_date(); ?>

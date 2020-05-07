@@ -178,6 +178,10 @@ textarea {
 	padding: $unit*0.5;
 }
 
+li, ol {
+	list-style: none;
+}
+
 
 .wrapper {
 	margin: 40px auto 0;
