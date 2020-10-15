@@ -47,11 +47,11 @@ add_theme_support( 'post-formats', array(
 
 // 画像のwidth,heightを削除
 add_filter( 'post_thumbnail_html', 'custom_attribute' );
+add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
 function custom_attribute( $html ){
   $html = preg_replace('/(width|height)="\d*"\s/', '', $html);
   return $html;
 }
-
 
 /*#########################################################
 
