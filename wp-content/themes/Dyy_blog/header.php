@@ -12,18 +12,37 @@
 
 	<title><?php wp_title(); ?></title>
 
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="">
+	<meta name="description" content="note by kasumidyaya.">
+	<meta property="og:title" content="<?php wp_title(); ?>">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="<?php echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>">
+	<?php if (is_single()) : ?>
+	<meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />
+	<?php else: ?>
+	<meta property="og:image" content="https://kasumidyaya.net/ogp.png">
+	<?php endif; ?>
+	<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>">
+	<?php if ( is_single()): ?>
+	<?php if ($post->post_excerpt){ ?>
+	<meta name="description" content="<? echo $post->post_excerpt; ?>">
+	<?php } else {
+					$summary = strip_tags($post->post_content);
+					$summary = str_replace("\n", "", $summary);
+					$summary = mb_substr($summary, 0, 120). "…"; ?>
+	<meta name="description" content="<?php echo $summary; ?>">
+	<?php } ?>
+	<?php elseif ( is_home() || is_front_page() ): ?>
+	<meta name="description" content="<?php bloginfo('description'); ?>">
+	<?php elseif ( is_category() ): ?>
+	<meta name="description" content="<?php echo category_description(); ?>">
+	<?php elseif ( is_tag() ): ?>
+	<meta name="description" content="<?php echo tag_description(); ?>">
+	<?php else: ?>
+	<meta name="description" content="<?php the_excerpt();?>">
+	<?php endif; ?>
+	<meta name="twitter:card" content="summary"></meta>
 
-	<meta property="og:title" content="">
-	<meta property="og:type" content="">
-	<meta property="og:url" content="">
-	<meta property="og:image" content="">
-	<meta property="og:site_name" content="">
-	<meta property="og:description" content="" />
-	<meta property="fb:app_id" content="">
-
+	<link rel="canonical" href="https://note.kasumidyaya.net/">
 	<link rel="icon" href="<?php echo get_theme_file_uri('/favicon.ico'); ?>">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 
