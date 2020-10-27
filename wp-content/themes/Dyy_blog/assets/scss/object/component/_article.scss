@@ -49,10 +49,15 @@
     margin-bottom: 16px;
   }
   figcaption {
+    margin: 12px 0 0;
     text-align: center;
     color: #9a9a9a;
     font-size: 15px;
   }
+
+ figure {
+   margin: 0 0 36px;
+ }
   .wp-block-separator {
     width: 45px;
     margin: 48px auto;
