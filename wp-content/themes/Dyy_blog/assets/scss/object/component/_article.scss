@@ -96,6 +96,9 @@
     background-color: #f1f1f1;
     display: block;
     word-break: break-word;
+    p:last-child {
+      margin: 0;
+    }
   }
 }
 
