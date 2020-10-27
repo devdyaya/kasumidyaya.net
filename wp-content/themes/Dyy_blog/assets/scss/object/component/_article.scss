@@ -48,12 +48,18 @@
     font-size: 20px;
     margin: 36px 0 16px;
   }
+  img {
+    margin: 0 auto 18px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    vertical-align: top;
+   } 
+
   figure {
    margin: 0 auto 36px;
    img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: top;
+    margin: 0;
    }
  }
  
