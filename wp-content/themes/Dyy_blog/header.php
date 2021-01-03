@@ -57,7 +57,6 @@
 	<meta name="twitter:card" content="summary"></meta>
 	<meta name="twitter:description" content="note by kasumidyaya.">
 	<?php endif; ?>
-	
 
 	<link rel="canonical" href="https://note.kasumidyaya.net/">
 	<link rel="icon" href="<?php echo get_theme_file_uri('/favicon.ico'); ?>">

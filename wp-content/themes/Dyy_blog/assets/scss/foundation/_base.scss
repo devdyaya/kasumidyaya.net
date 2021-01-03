@@ -91,14 +91,16 @@ $c-font: #333;
 	box-sizing: border-box;
 }
 
-$font-family: 'Noto Sans', 'Noto Sans CJK JP', 'Noto Sans CJK JP Subset', "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family: YakuHanJPs, 'Noto Sans', 'Noto Sans CJK JP', 'Noto Sans CJK JP Subset', "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 html {
 	@include fontsize(17);
 	// Open Sans=google Helvetica Neue=OSX標準 游ゴシック=Mac OS 10.9とWindows 8.1から標準搭載
 	font-family: $font-family;
+	font-weight: 300;
+	color: #333;
+	font-size: 18px;
 }
 p {
-	font-size: 16px;
 	margin-bottom: 28px;
 	line-height: 1.8;
 }
