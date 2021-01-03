@@ -18,7 +18,9 @@
 	<meta property="og:url" content="<?php echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>">
 	
 	<?php if (is_single() && has_post_thumbnail() ) : ?>
-	<meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />
+	<meta property="og:image" content="<?php the_post_thumbnail_url(); ?>">
+	<?php elseif(is_single()): ?>
+	<meta property="og:image" content="<?php echo get_theme_file_uri('assets/img/tmb.png'); ?>">
 	<?php else: ?>
 	<meta property="og:image" content="https://kasumidyaya.net/ogp.png">
 	<?php endif; ?>
@@ -42,7 +44,13 @@
 	<?php else: ?>
 	<meta name="description" content="<?php the_excerpt();?>">
 	<?php endif; ?>
+
+	<?php if (is_single() && has_post_thumbnail() ) : ?>
+	<meta name="twitter:card" content="summary_large_image"></meta>
+	<?php else: ?>
 	<meta name="twitter:card" content="summary"></meta>
+	<?php endif; ?>
+	
 
 	<link rel="canonical" href="https://note.kasumidyaya.net/">
 	<link rel="icon" href="<?php echo get_theme_file_uri('/favicon.ico'); ?>">
