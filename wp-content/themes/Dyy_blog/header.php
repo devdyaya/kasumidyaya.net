@@ -50,6 +50,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
+	<?php get_template_part( 'partials/ga' ); ?>
 </head>
 <body <?php body_class(); ?>>
 
