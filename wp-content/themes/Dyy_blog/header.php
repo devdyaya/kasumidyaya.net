@@ -16,11 +16,13 @@
 	<meta property="og:title" content="<?php wp_title(); ?>">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="<?php echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>">
-	<?php if (is_single()) : ?>
+	
+	<?php if (is_single() && has_post_thumbnail() ) : ?>
 	<meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />
 	<?php else: ?>
 	<meta property="og:image" content="https://kasumidyaya.net/ogp.png">
 	<?php endif; ?>
+
 	<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>">
 	<?php if ( is_single()): ?>
 	<?php if ($post->post_excerpt){ ?>
