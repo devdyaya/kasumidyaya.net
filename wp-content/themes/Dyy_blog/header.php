@@ -16,20 +16,24 @@
 	<meta property="og:title" content="<?php wp_title(); ?>">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="<?php echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>">
-	<?php if (is_single()) : ?>
-	<meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />
+	
+	<?php if (is_single() && has_post_thumbnail() ) : ?>
+	<meta property="og:image" content="<?php the_post_thumbnail_url(); ?>">
+	<?php elseif(is_single()): ?>
+	<meta property="og:image" content="<?php echo get_theme_file_uri('assets/img/tmb.png'); ?>">
 	<?php else: ?>
 	<meta property="og:image" content="https://kasumidyaya.net/ogp.png">
 	<?php endif; ?>
+
 	<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>">
 	<?php if ( is_single()): ?>
 	<?php if ($post->post_excerpt){ ?>
-	<meta name="description" content="<? echo $post->post_excerpt; ?>">
-	<?php } else {
-					$summary = strip_tags($post->post_content);
-					$summary = str_replace("\n", "", $summary);
-					$summary = mb_substr($summary, 0, 120). "…"; ?>
-	<meta name="description" content="<?php echo $summary; ?>">
+		<meta name="description" content="<? echo $post->post_excerpt; ?>">
+		<?php } else {
+						$summary = strip_tags($post->post_content);
+						$summary = str_replace("\n", "", $summary);
+						$summary = mb_substr($summary, 0, 120). "…"; ?>
+		<meta name="description" content="<?php echo $summary; ?>">
 	<?php } ?>
 	<?php elseif ( is_home() || is_front_page() ): ?>
 	<meta name="description" content="<?php bloginfo('description'); ?>">
@@ -40,7 +44,19 @@
 	<?php else: ?>
 	<meta name="description" content="<?php the_excerpt();?>">
 	<?php endif; ?>
+
+	<?php if (is_single() && has_post_thumbnail() ) : ?>
 	<meta name="twitter:card" content="summary_large_image"></meta>
+	<meta property="og:image" content="<?php the_post_thumbnail_url(); ?>">
+	<meta name="twitter:description" content="<?php echo $summary; ?>">
+	<?php elseif(is_single()): ?>
+	<meta name="twitter:card" content="summary"></meta>
+	<meta property="twitter:image" content="<?php echo get_theme_file_uri('assets/img/tmb.png'); ?>">
+	<meta name="twitter:description" content="<?php echo $summary; ?>">
+	<?php else: ?>
+	<meta name="twitter:card" content="summary"></meta>
+	<meta name="twitter:description" content="note by kasumidyaya.">
+	<?php endif; ?>
 
 	<link rel="canonical" href="https://note.kasumidyaya.net/">
 	<link rel="icon" href="<?php echo get_theme_file_uri('/favicon.ico'); ?>">
