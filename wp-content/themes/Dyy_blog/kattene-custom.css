@@ -1,0 +1,66 @@
+.kattene {
+  padding: 0px;
+  border-radius: 0px;
+  display: table;
+  width: 100%;
+}
+
+.kattene a:hover {
+  background: none;
+  color: #333;
+}
+
+.kattene__imgpart {
+
+}
+
+.kattene__imgpart img {
+  box-shadow: none;
+}
+
+.kattene__title {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+
+.kattene__infopart {
+  padding-top: 16px;
+  padding-right: 16px;
+
+  display: table-cell;
+  vertical-align: top;
+  position: relative;
+  padding-left: 10px;
+  width: 80%;
+}
+
+.kattene__btns.__one > div {
+  width: 100%;
+  float: none;
+  margin-left: 0px;
+}
+
+.kattene__btns {
+  padding-right: 26px;
+  position: absolute;
+  bottom: 6px;
+  box-sizing: border-box;
+}
+
+
+.kattene__btn,
+.kattene__btn.__orange {
+  background: #ccc;
+  color: #333;
+  box-shadow: none;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 0px;
+  transition: none;
+}
+
+.kattene__btn.__orange:hover {
+ background: #ff9901;
+}

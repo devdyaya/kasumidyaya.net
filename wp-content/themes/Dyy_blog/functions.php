@@ -142,3 +142,6 @@ function twpp_enqueue_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'twpp_enqueue_scripts' );
 
+//AmazonアフィリエイトのCSS修正
+add_action( 'kattene', 'kattene_custom' );
+
